@@ -20,7 +20,7 @@ class Form {
 
     this.input.position(displayWidth / 2 - 40, displayHeight / 2 - 80);
     this.button.position(displayWidth / 2 + 30, displayHeight / 2);
-    this.reset.position(displayWidth / 2 - 800, displayHeight / 2 - 500);
+    this.reset.position(displayWidth - 100,20);
 
     this.button.mousePressed(() => {
       this.input.hide();

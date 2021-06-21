@@ -67,7 +67,7 @@ class Game {
         index = index + 1;
 
         //position the cars a little away from each other in x direction
-        x = x + 300;
+        x = x + 200;
         //use data form the database to display the cars in y direction
         y = displayHeight - allPlayers[plr].distance;
         cars[index - 1].x = x;
@@ -103,19 +103,19 @@ class Game {
       engine.stop();
     }
 
-    if (player.distance > 5260 && passedFinish === false) {
+    if (player.distance > 3760 && passedFinish === false) {
       Player.updateFinishPlayers();
       player.rank = finishPlayers;
       player.update();
       passedFinish = true;
       finish.play();
       engine.stop();
-      /*swal({
-        title: "Cogratulations",
+      swal({
+        title: "Congratulations",
         text: "Game Finished",
-        icon: "Success",
+        icon: "success",
         button: "Ok"
-      })*/
+      });
     }
 
     drawSprites();
@@ -132,7 +132,7 @@ class Game {
     image(bronze, displayWidth / -4, -100 + displayHeight / 9, 200, 240);
     image(silver, displayWidth / 4, -100 + displayHeight / 10, 225, 270);
     image(gold, 0, -100, 250, 300);
-    textAllign(CENTER);
+    textAlign(CENTER);
     textSize(50);
     for (var plr in allPlayers) {
       if (allPlayers[plr].rank === 1) {

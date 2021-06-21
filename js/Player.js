@@ -35,7 +35,7 @@ class Player {
     })
   }
   getFinishPlayers() {
-    var finishedPlayerRef = database.ref('finishPlayers');
+    var finishedPlayerRef = database.ref('finishedPlayers');
     finishedPlayerRef.on("value", (data) => {
       finishPlayers = data.val();
     })
